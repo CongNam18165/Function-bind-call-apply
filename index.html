@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <p>*Có 3 loại function</p>
+    <p>- Declaration Function</p>
+    <p>+ Định nghĩa: Chúng ta dùng từ khóa "function" sau đó đặt tên cho function</p>
+    <p>+ Cú pháp: function declrarationFunction(){....}</p>
+    <p>+ Cách hoạt động:  </p>
+    <p>> Để declarationFunction trả về 1 giá trị nào đó thì t dùng từ khóa return và để thực hiện code bên trong ta phải gọi hàm băng cách viết tên hàm và thêm dấu gọi hàm() </p>
+    <p>>declaration function có thể hosting nên có thể gọi hàm trước khi định nghĩa ra hàm</p>    
+    <p>- Expression Function</p>
+    <p>+ Định nghĩa: Thường thì Expression Function sẽ được gán vào 1 biến bất kì và dùng từ khóa function để định nghĩa
+    </p>
+    <p>+ Cú pháp: const expressionFunction = function(){......}</p>
+    <p>+ Cách hoạt động: </p>
+    <p>> Thường được dùng làm callback, và dùng để tạo các hàm tức thời và thực thi ngay lập tức</p>
+    <p>> Dùng từ khóa return khi muốn expressionFunction trả về 1 giá trị nào đó</p>
+    <p>> Hàm không hỗ trợ hosting nên nếu gọi hàm trước kkhi định nghĩa sẽ bị lỗi</p>
+    <p>- Arrow Function</p>
+    <p>+ Định nghĩa: Nó giống expressionFunction những sẽ được rút gọn từ khóa function và sử dụng mũi tên để viết hàm
+    </p>
+    <p>+ cú pháp const arrowFunction = () => {}</p>
+    <p>+ Cách hoạt động: </p>
+    <p>> arrowFunction sẽ trả về giá trị ngay sau dấu => nếu không sử dụng 1 block scope.Nếu sử dụng block scope và muốn trả
+        về 1 giá trị nào đó thì phải sử dụng từ khóa return giống các loại hàm khác</p>
+    <h1>Từ khóa call(),apply(),bind()</h1>
+<p>- Phương thức bind()</p>
+<p>+ Định nghĩa: được sử dụng để tạo ra 1 bản sao mưới của 1 hàm và ràng buộc giá trị "this" trong hàm đó với 1 đối tượng cụ thể </p>
+<p>+ Cú pháp: const newFunction = oldFunction.bind(context) trong đó context là đối tượng mà mình muốn gán cho "this" trong hàm mới</p>
+<p>- Phương thức call()</p>
+<p>+ Định nghĩa: được sử dụng để gọi hàm và ràng buộc giá trị "this" của hàm đó với 1 đối tượng cụ thể </p>
+<p>+ Cú pháp: oldFunction.call(context, arg1, arg2, ...) trong đó context là đối tượng mà mình muốn gán cho 'this' trong hàm. và arg1,arg2 là các đối số của hàm</p>
+<p>- Phương thức apply()</p>
+<p>+ Định nghĩa: giống như phương thức call() nhưng khác ở chỗ truyền đối số vào hàm </p>
+<p>+ Cú pháp: oldFunction.apply(context, [arg1, arg2, ...]) trong đó context là đối tượng mà mình muốn gán cho "this" trong hàm và arg1,arg2 được cho vào 1 mảng ;
+</p>
+</body>
+
+</html>
