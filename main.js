@@ -44,5 +44,15 @@ const person4 = {
         console.log(`${date1} và ${date2}, Tao đi ${this.name} `);
     },
 };
+const person9 = {name: "ngủ"}
 
-person4.toDo.apply({ name: "ngủ" }, ["Thứ 7","Chủ nhật"]);
+person4.toDo.apply(person9, ["Thứ 7","Chủ nhật"]);
+// Ví dụ về từ khóa "this"
+const animal = {
+    name: "Chó",
+    legs: 4,
+    test: function(){
+        console.log(this)
+    }
+}
+animal.test();

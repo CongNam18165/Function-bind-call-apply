@@ -58,6 +58,25 @@
         </br>
     <p>console.log(logger3(3, 1)) </p>
     <p style="font-weight: 700;">Trong tab console sẽ in ra: Hiệu 2 số là "2" và Hàm trả về giá trị là "3" </p>
+    <h1>Từ khóa "this"</h1>
+    <p>- Định nghĩa: Từ khóa "this" trong js đề cập đến đối tượng mà nó thuộc về</p>
+    <p>- Đặc tính: Trong 1 phương thức, "this" tham chiếu tới đối tượng truy cập phương thức.Nếu "this" đứng ngoài
+        phương thức thì "this" tham chiếu tới đối tượng global</p>
+    <p>- Lưu ý: </p>
+    <p>+ Trong 1 hàm tạo thì "this" là đại diện cho đối tượng sẽ được tạo</p>
+    <p>+ Các phương thức bind(),call(),apply() có thể tham chiếu "this" tới đối tượng khác</p>
+    <p style="font-weight: 700;">- Ví dụ: </p>
+    <p>nếu ta viết trong file js là:
+        </br>const animal = {
+        </br> name: "Chó",
+        </br>legs: 4,
+        </br> test: function(){
+        </br> console.log(this)
+        </br> }
+        </br>}
+        </br>animal.test();</p>
+    <p style="font-weight: 700;">Trong tab console sẽ in ra: chính đối tượng mà từ khóa this thuộc về là đối tượng
+        animal</p>
     <h1>Từ khóa call(),apply(),bind()</h1>
     <p>- Phương thức bind()</p>
     <p>+ Định nghĩa: được sử dụng để tạo ra 1 bản sao mới của 1 hàm và ràng buộc giá trị "this" trong hàm đó với 1 đối
@@ -80,29 +99,29 @@
     <p>+ Định nghĩa: được sử dụng để gọi hàm và ràng buộc giá trị "this" của hàm đó với 1 đối tượng cụ thể </p>
     <p>+ Cú pháp: oldFunction.call(context, arg1, arg2, ...) trong đó context là đối tượng mà mình muốn gán cho 'this'
         trong hàm. và arg1,arg2 là các đối số của hàm</p>
-        <p style="font-weight: 700;">+ Ví dụ: </p>
-        <p>const person3 = {
-            </br>name: "ngủ",
-            </br>toDo: function (date) {
-            </br> console.log(`${date}, tao đi ${this.name}`);
-            </br> },
-            </br>};
-            </br>person3.toDo.call({ name: "đá bóng" }, "Thứ 5");
-        <p style="font-weight: 700;">Trong tab console sẽ in ra: Thứ 5, tao đi đá bóng  </p>
+    <p style="font-weight: 700;">+ Ví dụ: </p>
+    <p>const person3 = {
+        </br>name: "ngủ",
+        </br>toDo: function (date) {
+        </br> console.log(`${date}, tao đi ${this.name}`);
+        </br> },
+        </br>};
+        </br>person3.toDo.call({ name: "đá bóng" }, "Thứ 5");
+    <p style="font-weight: 700;">Trong tab console sẽ in ra: Thứ 5, tao đi đá bóng </p>
     <p>- Phương thức apply()</p>
     <p>+ Định nghĩa: giống như phương thức call() nhưng khác ở chỗ truyền đối số vào hàm </p>
     <p>+ Cú pháp: oldFunction.apply(context, [arg1, arg2, ...]) trong đó context là đối tượng mà mình muốn gán cho
         "this" trong hàm và arg1,arg2 được cho vào 1 mảng ;
     </p>
     <p style="font-weight: 700;">+ Ví dụ: </p>
-        <p>const person4 = {
-            </br>name: "chạy bộ",
-            </br>toDo: function (date1,date2) {
-            </br> console.log(`${date1} và ${date2}, Tao đi ${this.name} `);
-            </br> },
-            </br>};
-            </br>person4.toDo.apply({ name: "ngủ" }, ["Thứ 7","Chủ nhật"]);
-        <p style="font-weight: 700;">Trong tab console sẽ in ra: Thứ 7, Chủ nhật, tao đi ngủ  </p>
+    <p>const person4 = {
+        </br>name: "chạy bộ",
+        </br>toDo: function (date1,date2) {
+        </br> console.log(`${date1} và ${date2}, Tao đi ${this.name} `);
+        </br> },
+        </br>};
+        </br>person4.toDo.apply({ name: "ngủ" }, ["Thứ 7","Chủ nhật"]);
+    <p style="font-weight: 700;">Trong tab console sẽ in ra: Thứ 7, Chủ nhật, tao đi ngủ </p>
     <script src="./main.js"></script>
 </body>
 
