@@ -1,4 +1,5 @@
 //declaretion Function
+let declaretionElement = document.querySelector(".declaretionFunction")
 function logger1(a, b) {
     console.log(`Tổng 2 số là ${a + b}`)
     return 1;
@@ -30,18 +31,18 @@ newSayHello();
 //Ví dụ về call()
 const person3 = {
     name: "ngủ",
-    sayHello: function (date) {
+    toDo: function (date) {
         console.log(`${date}, tao đi ${this.name}`);
     },
 };
 
-person3.sayHello.call({ name: "đá bóng" }, "Thứ 5");
+person3.toDo.call({ name: "đá bóng" }, "Thứ 5");
 //Ví dụ về apply()
 const person4 = {
     name: "chạy bộ",
-    sayHello: function (date1,date2) {
-        console.log(`${date1} và ${date2}, Tao ${this.name} `);
+    toDo: function (date1,date2) {
+        console.log(`${date1} và ${date2}, Tao đi ${this.name} `);
     },
 };
 
-person4.sayHello.apply({ name: "ngủ" }, ["Thứ 7","Chủ nhật"]);
+person4.toDo.apply({ name: "ngủ" }, ["Thứ 7","Chủ nhật"]);
